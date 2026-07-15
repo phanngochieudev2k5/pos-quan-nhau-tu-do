@@ -1,0 +1,214 @@
+.header {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-dark);
+    position: relative;
+    z-index: 1000;
+}
+
+.header__logo-wrapper {
+    text-decoration: none;
+    display: block;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.header__logo-main {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 0.9;
+}
+
+.header__divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 20px;
+}
+
+.header__hotline {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__hotline-label {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header__hotline-number {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.header__nav {
+    margin-right: 20px;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__nav-item {
+    display: block;
+}
+
+.header__nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 40px 15px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-bottom-left-radius: 8px;
+}
+
+.header__btn-booking {
+    display: inline-block;
+    color: #ffffff;
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header__btn-booking:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.header__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    color: #ffffff;
+    font-size: 2.6rem;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.header__icon-close {
+    display: none;
+}
+
+.header__icon-bars {
+    display: block;
+}
+
+.header__hamburger.active .header__icon-bars {
+    display: none;
+}
+
+.header__hamburger.active .header__icon-close {
+    display: block;
+}
+
+.header__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 998;
+}
+
+.header__overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+
+    .header__divider,
+    .header__hotline {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 320px;
+        max-width: 80%;
+        height: 100%;
+        background-color: var(--primary-color);
+        margin-right: 0;
+        padding-top: 100px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .header__nav-link {
+        padding: 20px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header__nav-link:hover,
+    .header__nav-link.active {
+        border-bottom-left-radius: 0;
+    }
+
+    .header__logo-wrapper svg {
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__btn-booking {
+        display: none;
+    }
+
+    .header__logo-wrapper svg {
+        width: 150px;
+        height: auto;
+    }
+}
