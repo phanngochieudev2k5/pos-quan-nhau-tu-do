@@ -136,7 +136,7 @@ const Header = () => {
               </nav>
 
               <div className="header__action">
-                <NavLink to="#" className="header__btn-booking">
+                <NavLink to="#" className="btn header__btn-booking">
                   ĐẶT BÀN
                 </NavLink>
               </div>

@@ -1,8 +1,11 @@
 .header {
     background-color: var(--primary-color);
     border-bottom: 2px solid var(--primary-dark);
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header__logo-wrapper {
@@ -70,7 +73,7 @@
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;
-    padding: 40px 15px;
+    padding: 35px 15px;
     display: block;
     transition: all 0.3s ease;
     border-radius: 0;
@@ -83,7 +86,7 @@
     border-bottom-left-radius: 8px;
 }
 
-.header__btn-booking {
+.btn {
     display: inline-block;
     color: #ffffff;
     border: 2px solid var(--secondary-color);
@@ -95,7 +98,8 @@
     transition: all 0.3s ease;
 }
 
-.header__btn-booking:hover {
+.header__btn-booking:hover,
+.btn:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }

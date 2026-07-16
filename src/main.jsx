@@ -10,14 +10,19 @@ import AdminPage from "./pages/admin/admin.jsx";
 import WaiterPage from "./pages/waiter/waiter.jsx";
 import KitchenPage from "./pages/kitchen/kitchen.jsx";
 import LoginPage from "./pages/login/login.jsx";
+import HomePage from "./pages/customer/home/home.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
       {
+        index: true,
+        element: <HomePage />,
+      },
+      {
         path: "/home",
-        element: <App />,
+        element: <HomePage />,
       },
       {
         path: "/menu",

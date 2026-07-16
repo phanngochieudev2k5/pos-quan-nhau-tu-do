@@ -1,4 +1,6 @@
+import BannerMain from "../../../components/banner-main/bannermain";
+
 const HomePage = () => {
-  return <div>Home</div>;
+  return <BannerMain/>;
 };
 export default HomePage;
